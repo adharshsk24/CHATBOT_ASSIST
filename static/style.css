@@ -1,0 +1,343 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('image.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent body scroll */
+}
+
+.chat-container {
+    width: 1000px;
+    height: 600px;
+    padding: 0;
+    border-radius: 20px;
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 1s ease;
+}
+@media (max-width: 1024px) {
+    .chat-container {
+        width: 90%;
+        height: 80vh;
+    }
+}
+@media (max-width: 768px) {
+    .chat-container {
+        width: 95%;
+        height: 90vh;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 480px) {
+    .chat-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+.chat-header {
+    background: rgba(11, 41, 76, 0.17);
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 10px;
+}
+.chat-header h2 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.chat-window {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    max-width: 75%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+    animation: fadeIn 0.4s ease-in;
+    position: relative;
+}
+
+.user-message {
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background: rgba(0, 0, 0, 0.08);
+    color: #fff;
+    align-self: flex-start;
+}
+.chat-input-area {
+    display: flex;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 10px;
+    align-items: center;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+}
+
+#send-btn {
+    margin-left: 10px;
+    background: #0d8efd;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(13, 142, 253, 0.6);
+}
+
+#send-btn:hover {
+    background: #0b5ed7;
+    box-shadow: 0 0 15px rgba(13, 142, 253, 0.9),
+                0 0 30px rgba(13, 142, 253, 0.6);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Scrollbar styles */
+.chat-window::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+    background: rgba(0, 140, 255, 0.6);
+    border-radius: 10px;
+}
+
+.chat-window::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 140, 255, 0.8);
+}
+
+.bot-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    display: flex;
+    gap: 3px;
+}
+
+.typing-indicator span {
+    width: 6px;
+    height: 6px;
+    background-color: #007bff;
+    border-radius: 50%;
+    animation: blink 1.2s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+/* Retrain Button styles */
+#retrain-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#retrain-btn:hover {
+    background: #c0392b;
+}
+#retrain-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
+.retrain-loading {
+    background: #f39c12;
+}
+/* Spin animation for SVG */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.spin-icon {
+    animation: spin 1s linear infinite;
+}
+
+/* Gemini Buttons Styling (for Elaborate/Guide - now REMOVED from HTML/JS, but styles kept in case needed later) */
+/*
+.gemini-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.bot-message .gemini-buttons {
+    justify-content: flex-start;
+}
+.gemini-button {
+    background-color: #3498db;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+.gemini-button:hover {
+    background-color: #2980b9;
+}
+.gemini-button:disabled {
+    background-color: #a0c3ec;
+    cursor: not-allowed;
+}
+*/
+
+/* Dropup Menu Styles */
+.dropup-btn {
+    padding: 10px;
+    background: linear-gradient(145deg, #180a61, #2e19ac);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(24, 10, 97, 0.4);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.dropup-btn:hover {
+    background: linear-gradient(145deg, #1f0f7a, #3b29d2);
+    box-shadow: 0 6px 12px rgba(24, 10, 97, 0.6);
+    transform: scale(1.05);
+}
+
+.dropup-menu {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    min-width: 250px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow-y: auto;
+    z-index: 100;
+    flex-direction: column;
+    padding: 8px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropup-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    display: flex;
+}
+.dropup-menu div {
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s ease;
+    color: #333;
+}
+
+.dropup-menu div:last-child {
+    border-bottom: none;
+}
+.dropup-menu div:hover {
+    background-color: #f0f2ff;
+    color: #1a237e;
+    font-weight: 500;
+}

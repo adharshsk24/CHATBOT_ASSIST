@@ -1,0 +1,556 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "How are you", "What's up", "Good morning", "Good evening", "Yo"],
+      "responses": ["Hello! How can I assist you today?", "Hi there! What can I do for you?", "Good to see you! How can I help?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "cya", "I have to go", "take care"],
+      "responses": ["Goodbye! Have a great day.", "See you later! Feel free to reach out anytime.", "Take care!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks a lot", "I appreciate it"],
+      "responses": ["You're welcome!", "Happy to help!", "My pleasure! Is there anything else?"]
+    },
+    {
+      "tag": "no_problem",
+      "patterns": ["No problem", "No worries", "That's okay"],
+      "responses": ["Great!", "Alright.", "Sounds good."]
+    },
+    {
+      "tag": "what_time",
+      "patterns": ["What time is it?", "Do you know the time?", "current time"],
+      "responses": ["I don't have a direct connection to a clock, but your device's time should be accurate!"]
+    },
+    {
+      "tag": "tell_joke",
+      "patterns": ["Tell me a joke", "Make me laugh", "Do you know any jokes?"],
+      "responses": ["Why did the banker break up with the ATM? There was no chemistry, just a lot of transactions.", "What do you call a sad banker? A loan arranger.", "Why don't bankers get along with artists? Because bankers only draw interest!"]
+    },
+    {
+      "tag": "ask_how_are_you",
+      "patterns": ["How are you?", "How are you doing?"],
+      "responses": ["I'm doing great, thank you for asking! I'm ready to help with your banking questions.", "I'm just a bunch of code, but I'm functioning perfectly! How can I help?"]
+    },
+    {
+      "tag": "user_happy",
+      "patterns": ["This is great", "Hi", "I'm happy", "Awesome", "That's perfect"],
+      "responses": ["I'm glad I could help!", "That's great to hear!", "Awesome!"]
+    },
+    {
+      "tag": "user_angry",
+      "patterns": ["I'm angry", "This is frustrating", "I'm so mad", "This is unacceptable"],
+      "responses": ["I understand your frustration and I'm here to help. Please tell me more about the issue.", "I'm sorry to hear that. Let's work together to resolve this. What seems to be the problem?"]
+    },
+    {
+      "tag": "user_sad",
+      "patterns": ["I'm sad", "That's disappointing", "I'm upset"],
+      "responses": ["I'm sorry to hear that. I hope I can help make things a bit better.", "I'm here to assist if there's anything I can do."]
+    },
+    {
+      "tag": "positive_feedback",
+      "patterns": ["You are very helpful", "Great job", "You are a good bot"],
+      "responses": ["Thank you! I'm happy to be of assistance.", "That's kind of you to say! My goal is to help.", "Thank you for the feedback!"]
+    },
+    {
+      "tag": "negative_feedback",
+      "patterns": ["You are useless", "You can't help", "This is not helping"],
+      "responses": ["I apologize if I'm not meeting your expectations. I am still learning. Perhaps I can rephrase your query or connect you with a human agent?", "I'm sorry I couldn't provide the right answer. Could you try asking in a different way?"]
+    },
+    {
+      "tag": "bot_identity",
+      "patterns": ["Who are you?", "What is your name?", "What are you?"],
+      "responses": ["I am BankBot, a virtual assistant created to help you with your banking needs.", "You can call me BankBot. I'm an AI assistant."]
+    },
+    {
+      "tag": "bot_capabilities",
+      "patterns": ["What can you do?", "How can you help?", "What are your features?"],
+      "responses": ["I can help with a variety of tasks, including checking account information, explaining card services, finding branch locations, answering questions about loans, and more. What would you like to do?"]
+    },
+    {
+      "tag": "are_you_a_robot",
+      "patterns": ["Are you a robot?", "Are you human?", "Am I talking to a bot?"],
+      "responses": ["I am a sophisticated AI. I don't need to sleep!", "That's right, I'm a bot. But I'm a friendly one!"]
+    },
+    {
+      "tag": "who_made_you",
+      "patterns": ["Who created you?", "Who is your developer?"],
+      "responses": ["My creators are developers who are passionate about making banking easier.", "I was created by a talented developer using Python and modern AI techniques to serve this bank's customers."]
+    },
+    {
+      "tag": "open_account",
+      "patterns": ["How do I open a new account?", "I want to open a bank account", "create a new account", "Help me to open a new account"],
+      "responses": [
+        "- You can open a new account by visiting our website and filling out the online application form.",
+        "- Alternatively, you can visit any of our branches for assistance."
+      ]
+    },
+    {
+      "tag": "account_types",
+      "patterns": ["What types of accounts do you offer?", "Tell me about your savings accounts", "checking account options"],
+      "responses": [
+        "- We offer a range of accounts including Standard Checking, High-Yield Savings, and Student Accounts.",
+        "- Each account type has unique benefits.",
+        "- You can find more detailed information on our website."
+      ]
+    },
+    {
+      "tag": "close_account",
+      "patterns": ["How do I close my account?", "I want to cancel my account"],
+      "responses": [
+        "- We're sorry to see you go.",
+        "- To close your account, you'll need to visit a branch or call our customer support line.",
+        "- This ensures all funds are properly handled during the closure process."
+      ]
+    },
+    {
+      "tag": "update_contact_info",
+      "patterns": ["I need to change my address", "How to update my phone number?", "update my personal details", "How to update my personal information?"],
+      "responses": [
+        "- You can update your contact information, such as your address and phone number,",
+        "- Do this through the 'Profile' section in our mobile app or online banking portal."
+      ]
+    },
+    {
+      "tag": "get_account_number",
+      "patterns": ["What is my account number?", "Where can I find my IBAN?", "find my routing number", "How can I get my account details?"],
+      "responses": [
+        "- For your security, I cannot display account numbers here.",
+        "- You can find your full account and routing numbers on your bank statements.",
+        "- You can also find them in the mobile app, or at the bottom of your checks."
+      ]
+    },
+    {
+      "tag": "get_statement",
+      "patterns": ["I need a copy of my bank statement", "how to download statements", "view my e-statements", "How do I view my online statements?", "How to download my transaction history?", "How to enroll in e-statements?"],
+      "responses": [
+        "- You can view, download, and print your monthly statements by logging into your online banking account.",
+        "- Navigate to the 'Documents' or 'e-Statements' section to access them."
+      ]
+    },
+    {
+      "tag": "minimum_balance",
+      "patterns": ["Is there a minimum balance fee?", "Do I need to maintain a minimum balance?"],
+      "responses": [
+        "- Some of our accounts, like the Standard Checking account, require a minimum daily balance to avoid a monthly maintenance fee.",
+        "- You can find the specifics for your account type on our website's fee schedule page."
+      ]
+    },
+    {
+      "tag": "apply_credit_card",
+      "patterns": ["How to apply for a credit card?", "I want a new credit card", "credit card options"],
+      "responses": [
+        "- We have several credit card options with different rewards and benefits.",
+        "- You can compare them and apply directly on our website.",
+        "- Would you like a link to the page?"
+      ]
+    },
+    {
+      "tag": "check_application_status",
+      "patterns": ["Check my credit card application status", "What's the status of my application?"],
+      "responses": [
+        "- You can check your application status by entering your reference number on our 'Application Status' webpage.",
+        "- Alternatively, you can call our support team for an update."
+      ]
+    },
+    {
+      "tag": "activate_card",
+      "patterns": ["How do I activate my new card?", "activate my debit card", "card activation", "How to activate a new card?"],
+      "responses": [
+        "- You can activate your new card easily by calling the number on the sticker attached to it.",
+        "- Or, use the 'Card Services' menu in our mobile app."
+      ]
+    },
+    {
+      "tag": "lost_stolen_card",
+      "patterns": ["I lost my card", "my card was stolen", "block my credit card", "I can't find my debit card", "How to handle a lost card?", "How to get a new debit card?"],
+      "responses": [
+        "- I can help with that.",
+        "- To block your card immediately, please log in to the mobile app and use the 'Freeze Card' feature.",
+        "- For a replacement, please call our 24/7 support hotline right away."
+      ]
+    },
+    {
+      "tag": "change_pin",
+      "patterns": ["I forgot my PIN", "How to change my card PIN?", "reset PIN"],
+      "responses": [
+        "- You can change or reset your card's PIN at any of our ATMs.",
+        "- For security reasons, PIN changes cannot be done over the phone or online."
+      ]
+    },
+    {
+      "tag": "increase_credit_limit",
+      "patterns": ["I want to increase my credit limit", "request a higher credit limit"],
+      "responses": [
+        "- You can request a credit limit increase through your online banking portal under 'Card Services'.",
+        "- The request will be subject to a quick review of your account history and credit score."
+      ]
+    },
+    {
+      "tag": "card_benefits",
+      "patterns": ["What are the benefits of my card?", "Does my card have travel insurance?", "cash back rewards"],
+      "responses": [
+        "- Our cards come with various benefits like cashback, travel points, and purchase protection.",
+        "- To see the specific benefits for your card, please visit the 'Card Details' section on our website or app."
+      ]
+    },
+    {
+      "tag": "dispute_charge",
+      "patterns": ["I want to dispute a charge", "There's an incorrect charge on my statement", "report an unauthorized transaction"],
+      "responses": [
+        "- To dispute a charge, please log in to your online account.",
+        "- Find the transaction in your history and select the 'Dispute Charge' option.",
+        "- Our team will then investigate the claim."
+      ]
+    },
+    {
+      "tag": "check_balance",
+      "patterns": ["What is my balance?", "How much money do I have?", "check my account balance", "show balance", "How do I check my balance?"],
+      "responses": [
+        "- For security, I can't display your balance here.",
+        "- Please log in to our official mobile app or website to view your detailed account summary."
+      ]
+    },
+    {
+      "tag": "transaction_history",
+      "patterns": ["Show my recent transactions", "What was my last purchase?", "view my transaction history", "How to view transaction history?", "How to check recent activity?"],
+      "responses": [
+        "- You can view your complete transaction history, including pending and posted transactions,",
+        "- Do this by logging into your online banking account or our mobile app."
+      ]
+    },
+    {
+      "tag": "bill_pay",
+      "patterns": ["How do I pay a bill?", "set up bill pay", "pay my credit card bill", "How to automate my bill payments?"],
+      "responses": [
+        "- Our Bill Pay service is a convenient way to manage your payments.",
+        "- You can set up payees, schedule recurring payments, and view your payment history all from your online banking dashboard."
+      ]
+    },
+    {
+      "tag": "direct_deposit",
+      "patterns": ["How to set up direct deposit?", "I need a direct deposit form"],
+      "responses": [
+        "- To set up direct deposit, you will need to provide your employer with our bank's routing number and your account number.",
+        "- You can find a pre-filled direct deposit form in the 'Account Services' section of our website."
+      ]
+    },
+    {
+      "tag": "apply_loan",
+      "patterns": ["I need a loan", "How to apply for a personal loan?", "car loan application"],
+      "responses": [
+        "- We offer various loan options, including personal, auto, and home loans.",
+        "- You can start the application process online to get pre-qualified.",
+        "- What type of loan are you interested in?"
+      ]
+    },
+    {
+      "tag": "loan_rates",
+      "patterns": ["What are your loan interest rates?", "current mortgage rates", "interest on a car loan"],
+      "responses": [
+        "- Loan interest rates vary based on the loan type, term, and your credit profile.",
+        "- You can view our current starting rates on the 'Loans' page of our website."
+      ]
+    },
+    {
+      "tag": "check_loan_status",
+      "patterns": ["Check the status of my loan application", "Is my loan approved?"],
+      "responses": [
+        "- You can check the status of your loan application by logging into our loan application portal with the reference number you received after applying."
+      ]
+    },
+    {
+      "tag": "loan_payment",
+      "patterns": ["How can I pay my loan?", "make a mortgage payment"],
+      "responses": [
+        "- You can make a loan payment through online banking.",
+        "- Set up autopay from your checking account.",
+        "- Pay by mail.",
+        "- Or, make a payment at any of our branch locations."
+      ]
+    },
+    {
+      "tag": "investment_options",
+      "patterns": ["What investment options do you have?", "I want to invest my money", "mutual funds or stocks"],
+      "responses": [
+        "- We offer a variety of investment services, including mutual funds, ETFs, stocks, and retirement accounts.",
+        "- For personalized advice, we recommend speaking with one of our financial advisors."
+      ]
+    },
+    {
+      "tag": "open_investment_account",
+      "patterns": ["How to open an investment account?", "start investing"],
+      "responses": [
+        "- You can start by scheduling a meeting with a financial advisor.",
+        "- They can help you open an investment account that aligns with your financial goals.",
+        "- You can book an appointment on our website."
+      ]
+    },
+    {
+      "tag": "financial_advisor",
+      "patterns": ["Can I talk to a financial advisor?", "I need investment advice"],
+      "responses": [
+        "- Absolutely. Speaking with a financial advisor is a great step.",
+        "- You can schedule a complimentary consultation through our website or by calling our investment services desk."
+      ]
+    },
+    {
+      "tag": "password_reset",
+      "patterns": ["I forgot my password", "How to reset my online banking password?", "can't log in", "How to change my password?"],
+      "responses": [
+        "- You can reset your password by clicking the 'Forgot Password?' link on the login page.",
+        "- You'll be asked to verify your identity through your email or phone number on file."
+      ]
+    },
+    {
+      "tag": "app_download",
+      "patterns": ["Do you have a mobile app?", "Where can I download the app?"],
+      "responses": [
+        "- Yes, we do!",
+        "- Our mobile app is available for both iOS and Android.",
+        "- You can download it from the Apple App Store or Google Play Store."
+      ]
+    },
+    {
+      "tag": "app_features",
+      "patterns": ["What can I do on the app?", "features of the mobile app"],
+      "responses": [
+        "- Our mobile app allows you to check balances.",
+        "- Transfer funds.",
+        "- Deposit checks using your camera.",
+        "- Pay bills.",
+        "- Find ATMs, and much more!"
+      ]
+    },
+    {
+      "tag": "mobile_deposit_issue",
+      "patterns": ["My mobile check deposit is not working", "check deposit failed", "How to deposit a check using the app?"],
+      "responses": [
+        "- Please ensure the check is properly endorsed.",
+        "- Make sure you are in a well-lit area.",
+        "- Ensure all four corners of the check are visible in the photo.",
+        "- If it still fails, please contact our support team for assistance."
+      ]
+    },
+    {
+      "tag": "report_fraud",
+      "patterns": ["I think there is fraudulent activity on my account", "report a scam", "I received a suspicious email", "How do I report a fraudulent transaction?"],
+      "responses": [
+        "- If you suspect fraud, please call our fraud department immediately at our 24/7 hotline.",
+        "- Do not share any personal information through email or text.",
+        "- We will never ask for your password or PIN."
+      ]
+    },
+    {
+      "tag": "phishing_email",
+      "patterns": ["I got a weird email from the bank", "is this email legitimate?"],
+      "responses": [
+        "- Be cautious. We will never ask for your password, PIN, or full account number via email.",
+        "- If you receive a suspicious email, do not click any links.",
+        "- Please forward it to our security team and then delete it."
+      ]
+    },
+    {
+      "tag": "secure_password_tips",
+      "patterns": ["How to create a secure password?", "password security tips"],
+      "responses": [
+        "- A strong password should be at least 12 characters long.",
+        "- It should include a mix of uppercase letters, lowercase letters, numbers, and symbols.",
+        "- Avoid using personal information like your name or birthdate."
+      ]
+    },
+    {
+      "tag": "find_branch",
+      "patterns": ["Where is the nearest branch?", "find a bank branch near me", "branch locations"],
+      "responses": [
+        "- You can find all of our branch locations and hours by using the 'Branch & ATM Locator' tool on our website or in our mobile app."
+      ]
+    },
+    {
+      "tag": "find_atm",
+      "patterns": ["Where is the nearest ATM?", "ATM locator", "surcharge-free ATM"],
+      "responses": [
+        "- Our mobile app has a built-in ATM locator.",
+        "- It shows all of our ATMs and partner network ATMs where you can withdraw cash without a fee."
+      ]
+    },
+    {
+      "tag": "customer_service_phone",
+      "patterns": ["What is the customer service phone number?", "I need to talk to a person", "contact support"],
+      "responses": [
+        "- You can reach our customer support team 24/7 at 1-800-BANK-NOW (1-800-226-5669).",
+        "- For credit card services, please call 1-800-CARD-HLP."
+      ]
+    },
+    {
+      "tag": "branch_hours",
+      "patterns": ["What are your opening hours?", "Is the bank open today?", "holiday hours"],
+      "responses": [
+        "- Our branch hours are typically 9 AM to 5 PM on weekdays.",
+        "- For specific branch hours, holiday schedules, and weekend availability, please check the branch locator on our website."
+      ]
+    },
+    {
+      "tag": "bank_fees",
+      "patterns": ["What are the bank fees?", "Tell me about your fees", "overdraft fee cost"],
+      "responses": [
+        "- We have a detailed fee schedule available on our website.",
+        "- It outlines all potential fees, such as for overdrafts, wire transfers, and monthly maintenance.",
+        "- You can find it by searching for 'Fee Schedule' on our site."
+      ]
+    },
+    {
+      "tag": "travel_notice",
+      "patterns": ["I'm traveling abroad, do I need to notify the bank?", "How to set up a travel notice?", "set travel notification on my card"],
+      "responses": [
+        "- Yes, it's a good idea to set a travel notice to ensure uninterrupted use of your cards.",
+        "- You can do this through the 'Card Services' section in our mobile app or online banking portal."
+      ]
+    },
+    {
+      "tag": "request_checkbook",
+      "patterns": ["How to request a new checkbook?", "I need to order more checks", "order a checkbook"],
+      "responses": [
+        "- You can order a new checkbook by logging into your online banking account.",
+        "- Select 'Order Checks' under the 'Account Services' menu.",
+        "- Fees may apply depending on your account type."
+      ]
+    },
+    {
+      "tag": "stop_payment",
+      "patterns": ["How to issue a stop payment on a check?", "I need to stop a check payment", "cancel a check"],
+      "responses": [
+        "- To place a stop payment on a check, please log in to online banking or call our customer service.",
+        "- You will need the check number, amount, and payee name.",
+        "- Please note that a fee applies for this service."
+      ]
+    },
+    {
+      "tag": "view_credit_score",
+      "patterns": ["How to view my credit score?", "Can I see my FICO score?", "check my credit score for free"],
+      "responses": [
+        "- Many of our credit card accounts include a feature to view your FICO score for free.",
+        "- Please log in to your online account and look for the 'Credit Score' link on your dashboard."
+      ]
+    },
+    {
+      "tag": "passport_verification_help",
+      "patterns": [
+        "How is the state selected in passport verification?",
+        "Do I need to enter the state manually?",
+        "How do I search for the city?",
+        "What if I don’t know the village name?",
+        "Can I skip Ward and Block code?",
+        "What does DIY journey mean?",
+        "Is KYC needed again after DIY?"
+      ],
+      "responses": [
+        "- You do not need to enter the state manually. Just enter the PIN code, and the state will be auto-fetched based on it.",
+        "- To search for the city, type at least 3 letters of the city's name in the search bar. The system will auto-suggest matching city names in the dropdown. Select the correct one from the list.",
+        "- Once you select the city, the district will load automatically. Then, sub-district and village will be shown in dropdowns. If the village is not listed, try re-selecting the sub-district or re-entering the PIN code.",
+        "- Ward and Block codes are optional. Enter them only if required by your organization. Otherwise, you can leave them blank and continue.",
+        "- In a DIY journey (when the user has completed KYC on their own), once the lead is converted to Assisted mode, no additional KYC documents are needed. You can proceed directly without any further validation.",
+        "- The system is designed to auto-fetch each field based on the previous one. Make sure to follow the order: enter PIN code ➜ select city ➜ district ➜ sub-district ➜ village."
+      ]
+    },
+    {
+      "tag": "kyc_and_documents",
+      "patterns": [
+        "What documents are required for KYC?",
+        "KYC documents needed?",
+        "List of documents for KYC",
+        "What should I carry for verification?",
+        "How to complete KYC?",
+        "KYC process",
+        "What is the KYC procedure?",
+        "Documents for opening account",
+        "Do I need ID proof?",
+        "Is PAN card required for KYC?",
+        "Do I need Aadhaar card?",
+        "Can I do KYC online?",
+        "How to submit KYC documents?",
+        "Where can I upload my KYC?",
+        "KYC status check",
+        "How to check if my KYC is done?",
+        "KYC self verification process",
+        "DIY KYC vs Assisted KYC"
+      ],
+      "responses": [
+        "- To complete KYC, you typically need to submit a valid photo ID (like Aadhaar, PAN, Passport) and address proof.",
+        "- You can do this online through our portal or by visiting a branch.",
+        "- Yes, PAN and Aadhaar are commonly used documents for KYC. You can upload scanned copies via our mobile app or website.",
+        "- There are two ways to complete KYC: 1. Online (DIY KYC) by uploading documents and a selfie, or 2. Assisted KYC at a nearby branch.",
+        "- To check your KYC status, log in to your account and go to the 'Profile' or 'KYC' section. It'll show whether you're verified or if any action is needed.",
+        "- If you're opening a new account, you'll be asked for valid identity and address documents. Once submitted, KYC is typically approved within 24-48 hours.",
+        "- If you've already done KYC on your own (DIY), you don’t need to submit it again unless explicitly asked."
+      ]
+    },
+    {
+      "tag": "account_opening_methods",
+      "patterns": [
+        "How can I open a bank account?",
+        "Ways to open an account?",
+        "Is online account opening possible?",
+        "Can I open an account from home?",
+        "Do I need to visit a branch to open an account?",
+        "Tell me how to open a bank account",
+        "What are the methods to open an account?",
+        "Open account online or offline?",
+        "Do you offer video KYC?",
+        "What is the easiest way to open an account?",
+        "How do I open a savings account?",
+        "What are the steps to create a new account?",
+        "Can I open an account using Aadhaar?",
+        "What documents are needed to open an account?",
+        "Can I open an account without PAN?"
+      ],
+      "responses": [
+        "- You can open a new bank account in three ways: 1. Online via our website or mobile app, 2. By visiting a branch, or 3. Through Video KYC, which allows remote document verification.",
+        "- Yes, online account opening is available. Simply visit our website, fill in your details, upload documents, and complete video verification.",
+        "- For offline account opening, just walk into any of our branches with your identity proof (like PAN/Aadhaar) and a passport-size photo.",
+        "- You can open a savings account using Aadhaar and PAN via our mobile app. It's fast, secure, and contactless!",
+        "- We also offer assisted account opening at selected branches where a bank agent helps you fill out the form and verify documents on the spot."
+      ]
+    },
+    {
+      "tag": "nearest_branch_or_atm",
+      "patterns": [
+        "Where is the nearest branch?",
+        "Locate a bank branch near me",
+        "Find a nearby ATM",
+        "Where can I withdraw money?",
+        "ATM nearby?",
+        "Is there a branch in my area?",
+        "Branch location near me",
+        "ATM locator",
+        "How to find the closest ATM?",
+        "I want to visit a branch",
+        "Is there a branch open now?",
+        "Can you show me nearby branches or ATMs?",
+        "Nearby ATM with no charges"
+      ],
+      "responses": [
+        "- You can find your nearest branch or ATM using our online locator tool available on our website or mobile app.",
+        "- Please visit the 'Branch & ATM Locator' section in our app to find the closest options based on your current location.",
+        "- For a surcharge-free ATM, make sure to enable location services and use our app’s ATM finder tool.",
+        "- Our branches are typically open from 9 AM to 5 PM on weekdays. Use our locator to find branch-specific timings and holiday hours.",
+        "- To ensure accuracy, please provide your location or enable GPS in the app. We'll show you all nearby branches and ATMs instantly!"
+      ]
+    },
+  {
+    "tag":"Documents",
+    "patterns":[
+      "How to upload necessary documents?",
+      "Help me to upload docs."
+    ],
+    "responses":[
+      "To upload necessary documents for KYC, you typically need to submit a valid photo ID (like Aadhaar, PAN, Passport) and address proof.",
+      "You can do this online through our portal or by visiting a branch."
+    ]
+  
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CHATBOT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712005.png" alt="Bot Icon" class="bot-icon" />
+            <h2>Bot Assistant</h2>
+            <button id="retrain-btn" title="Reload Chatbot Embeddings">
+                <svg class="w-4 h-4 text-white spin-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004 12c0 2.21.817 4.227 2.158 5.765M18 19v-5h-.582m-15.356-2A8.001 8.001 0 0020 12c0-2.21-.817-4.227-2.158-5.765"></path></svg>
+                <span>Reload</span>
+            </button>
+        </div>
+
+        <div class="chat-window" id="chat-window"></div>
+
+        <div class="chat-input-area">
+            <input type="text" id="message-input" placeholder="Ask me about the app or anything general..." autocomplete="off" />
+            
+            <button id="send-btn">Send</button>
+            <button class="dropup-btn" id="dropupBtn" onclick="toggleDropdown()">▲</button>
+            <div id="dropup-menu" class="dropup-menu">
+                <div data-message="Where is the nearest branch?">Where is the nearest branch?</div>
+                <div data-message="How to open a bank account?">How to open a bank account?</div>
+                <div data-message="What is my balance?">What is my balance?</div>
+                <div data-message="How to activate a new card?">How to activate a new card?</div>
+                <div data-message="How to view transaction history?">How to view transaction history?</div>
+                <div data-message="How to update my personal information?">How to update my personal information?</div>
+                <div data-message="How to download my transaction history?">How to download my transaction history?</div>
+                <div data-message="How do I report a fraudulent transaction?">How do I report a fraudulent transaction?</div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>
